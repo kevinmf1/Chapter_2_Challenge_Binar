@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/nominal_tip_text"
+        style="@style/InputTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tip_title_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nominal_tip_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:endIconDrawable="@drawable/tip_amount"
+        app:endIconMode="custom"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@+id/nominal_tip_text"
+        app:layout_constraintStart_toStartOf="@+id/nominal_tip_text"
+        app:layout_constraintTop_toBottomOf="@+id/nominal_tip_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nominal_tip_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/tip_hint_value"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/service_experience_title"
+        style="@style/InputTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/pelayanan_title_value"
+        app:layout_constraintStart_toStartOf="@+id/nominal_tip_input"
+        app:layout_constraintTop_toBottomOf="@+id/nominal_tip_input" />
+
+    <RadioGroup
+        android:id="@+id/service_experience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/service_experience_title"
+        app:layout_constraintTop_toBottomOf="@+id/service_experience_title">
+
+        <RadioButton
+            android:id="@+id/amazing_experience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/service_experience_amazing_value" />
+
+        <RadioButton
+            android:id="@+id/good_experience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/service_experience_good_value" />
+
+        <RadioButton
+            android:id="@+id/ok_experience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/service_experience_ok_value" />
+
+    </RadioGroup>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/rating_star_title"
+        style="@style/InputTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/rating_title_value"
+        app:layout_constraintStart_toStartOf="@+id/service_experience"
+        app:layout_constraintTop_toBottomOf="@+id/service_experience" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/rating_star_title"
+        app:layout_constraintTop_toBottomOf="@+id/rating_star_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/keterangan_title"
+        style="@style/InputTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/keterangan_title_value"
+        app:layout_constraintStart_toStartOf="@+id/ratingBar"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pelayanan_keterangan_input"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/nominal_tip_input"
+        app:layout_constraintStart_toStartOf="@+id/nominal_tip_input"
+        app:layout_constraintTop_toBottomOf="@+id/keterangan_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pelayanan_keterangan_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:hint="\n"
+            android:inputType="textMultiLine|textLongMessage" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submit_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/blue_button"
+        android:text="@string/submit_button_value"
+        app:cornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/pelayanan_keterangan_input"
+        app:layout_constraintStart_toStartOf="@+id/pelayanan_keterangan_input"
+        app:layout_constraintTop_toBottomOf="@+id/pelayanan_keterangan_input" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
