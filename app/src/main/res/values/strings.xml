@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Chapter 2 Challenge Binar</string>
+    <string name="tip_splash_value">Aplikasi Penghitung Tip</string>
+    <string name="tip_title_value">Masukan nominal tip yang ingin anda berikan</string>
+    <string name="tip_hint_value">Contoh: 50.000</string>
+    <string name="pelayanan_title_value">Bagaimana pelayanan yang dia berikan?</string>
+    <string name="service_experience_amazing_value">Luar Biasa</string>
+    <string name="service_experience_good_value">Bagus</string>
+    <string name="service_experience_ok_value">Baik</string>
+    <string name="rating_title_value">Mau kasih berapa bintang?</string>
+    <string name="keterangan_title_value">Gimana nih pelayanannya?</string>
+    <string name="pelayanan_hint_value">Contoh: Pelayanannya bagus, ramah, dan cepat</string>
+    <string name="submit_button_value">Submit</string>
+    <string name="nominal_tip_error">Nominal tidak boleh kosong</string>
+    <string name="pelayanan_error">Pilih salah satu pelayanan yang tersedia</string>
+    <string name="rating_error">Berikan rating pelayanan terlebih dahulu!</string>
+    <string name="error_experience">Pilihan yang Anda pilih tidak tersedia</string>
+</resources>
